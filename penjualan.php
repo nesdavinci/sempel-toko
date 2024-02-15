@@ -10,9 +10,7 @@
 
     <?php
  
-
     require "koneksi.php";
-
 
     $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
@@ -33,7 +31,6 @@
                 <th>Waktu</th>
                 <th colspan="2">Aksi</th>
             </tr>
-
             <?php $i = 1; ?>
             <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
                 <tr>

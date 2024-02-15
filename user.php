@@ -61,7 +61,6 @@
         </table>
     </div>
     <script>
-
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
@@ -71,9 +70,3 @@
 </body>
 
 </html>
-			 
-				
-			
-
-
-    

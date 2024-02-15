@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>New Pembelian</title>
+    <title>New Penjualan</title>
 </head>
 
 <body>
