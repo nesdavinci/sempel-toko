@@ -23,7 +23,6 @@
     ?>
 
     <div>
-
         <form action="create-penjualan.php" method="POST">
             <h1>Tambah Penjualan</h1>
             <table>
@@ -52,9 +51,6 @@
             </table>
         </form>
     </div>
-</body>
-
-</html>
 </body>
 
 </html>

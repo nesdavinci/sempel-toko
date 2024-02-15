@@ -10,10 +10,10 @@
 
     <?php
 
-    require "koneksi.php";
+    require "koneksi.php"; ?>
 
     $sql = "SELECT * FROM barang";
-    $query = mysqli_query($koneksi, $sql);
+    $qeury = mysqli_query($koneksi, $sql);
     ?>
 
     <div>
