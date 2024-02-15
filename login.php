@@ -27,7 +27,7 @@
 		margin: 0;
 		padding: 0;
 		font-family: sans-serif;
-		background: #34495e;
+		background: #161b33;
 	}
 
 	.box {
@@ -54,7 +54,7 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #3498db;
+		border: 2px solid #474973;
 		padding: 14px 10px;
 		width: 200px;
 		outline: none;
@@ -66,7 +66,7 @@
 	.box input[type="text"]:focus,
 	.box input[type="password"]:focus {
 		width: 280px;
-		border-color: #2ecc71;
+		border-color: #474973;
 	}
 
 	.left-button {
@@ -76,7 +76,7 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #2ecc71;
+		border: 2px solid #474973;
 		padding: 14px 40px;
 		outline: none;
 		color: white;
@@ -92,7 +92,7 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #2ecc71;
+		border: 2px solid #474973;
 		padding: 14px 40px;
 		outline: none;
 		color: white;

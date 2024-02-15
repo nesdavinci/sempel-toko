@@ -8,18 +8,6 @@
 <body>
     <?php include "menu.php"; ?>
 
-    <?php
-    if ($_SESSION["level"] != "admin") {
-        echo "Anda tidak dapat mengakses halaman ini";
-        exit;
-    }
-
-    require "koneksi.php";
-
-    $sql = "SELECT * FROM user";
-    $query = mysqli_query($koneksi, $sql);
-    ?>
-
     <div>
         <h1>Data User</h1>
         <form action="new-user.php" method="GET">
@@ -34,9 +22,7 @@
                 <th>Diubah pada</th>
                 <th colspan="2">Aksi</th>
             </tr>
-
             <?php $i = 1; ?>
-            <?php while ($user = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $user["username"] ?></td>
@@ -57,7 +43,6 @@
                     </td>
                 </tr>
                 <?php $i++; ?>
-            <?php endwhile ?>
         </table>
     </div>
     <script>

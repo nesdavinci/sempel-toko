@@ -1,172 +1,188 @@
-<?php
-    session_start();
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>HOME</title>
+  <link href="home.php" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>  
+        <div>
+          <h1>HOME</h1>
+        </div>
+        <div class="menu-items">
+          <li><a href="home.php">Home</a></li>
+          <li><a href="user.php">User</a></li>
+          <li><a href="barang.php">Barang</a></li>
+          <li><a href="penjualan.php">Penjualan</a></li>
+		  <li><a href="pembelian.php">Pembelian</a></li>
+		  <li><a href="profil.php">Profil</a></li>
+		  <li><a href="lougout.php">lougout</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
 
-    if (!array_key_exists("username", $_SESSION)) {
-    	header("location:logout.php");
-    }
-?>
-
-<nav>
-	<ul>
-		<li><a href="home.php">HOME</a></li>
-		<li>MASTER
-			<ul>
-				<?php if ($_SESSION["level"] == "admin") : ?>
-					<li><a href="user.php">User</a></li>
-				<?php endif ?>
-				<li><a href="barang.php">Barang</a></li>
-			</ul>
-		</li>
-		<li>TRANSAKSI
-			<ul>
-				<li><a href="penjualan.php">Penjualan</a></li>
-				<li><a href="pembelian.php">Pembelian</a></li>
-			</ul>
-		</li>
-		<li>Selamat datang, <?= $_SESSION["username"] ?>!
-			<ul>
-				<li><a href="profil.php">Profil</a></li>
-				<li><a href="logout.php">Log out</a></li>
-			</ul>
-		</li>
-	</ul>
-</nav>
 
 <style>
-nav{
-   height: 4.5rem;
-   width: 100vw;
-   background-color: #131418;
-   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-   display: flex;
-   position: fixed;
-   z-index: 10;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.nav-links{
-   display: flex;
-   list-style: none; 
-   width: 88vw;
-   padding: 0 0.7vw;
-   justify-content: space-evenly;
-   align-items: center;
-   text-transform: uppercase;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #161b33;
 }
-.nav-links li a{
-   text-decoration: none;
-   margin: 0 0.7vw;
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
 }
-.nav-links li a:hover {
-   color: #61DAFB;
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
-.nav-links li {
-   position: relative;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
 }
-.nav-links li a:hover::before{
-   width: 80%;
+
+.navbar .menu-items {
+  display: flex;
 }
-.login-button:hover {
-   color: #131418;
-   background-color: #f2f5f7;
-   border:1.5px solid #f2f5f7;
-   transition: all ease-in-out 350ms;
+
+.navbar .nav-container li {
+  list-style: none;
 }
-.join-button{
-   color: #131418;
-   background-color: #61DAFB;
-   border: 1.5px solid #61DAFB;
-   border-radius: 2em;
-   padding: 0.6rem 0.8rem;
-   font-size: 1rem;
-   cursor: pointer;
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
 }
-.join-button:hover {
-   color: #f2f5f7;
-   background-color: transparent;
-   border:1.5px solid #f2f5f7;
-   transition: all ease-in-out 350ms;
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
 }
-.hamburger div{
-   width: 30px;
-   height:3px;
-   background: #f2f5f7;
-   margin: 5px;
-   transition: all 0.3s ease;
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
 }
-.hamburger{
-   display: none;
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
 }
-@media screen and (max-width: 800px){
-   nav{
-       position: fixed;
-       z-index: 3;
-   }
-   .hamburger{
-       display:block;
-       position: absolute;
-       cursor: pointer;
-       right: 5%;
-       top: 50%;
-       transform: translate(-5%, -50%);
-       z-index: 2;
-       transition: all 0.7s ease;
-   }
-   .nav-links{
-       position: fixed;
-       background: #131418;
-       height: 100vh;
-       width: 100%;
-       flex-direction: column;
-       clip-path: circle(50px at 90% -20%);
-       -webkit-clip-path: circle(50px at 90% -10%);
-       transition: all 1s ease-out;
-       pointer-events: none;
-   }
-   .nav-links.open{
-       clip-path: circle(1000px at 90% -10%);
-       -webkit-clip-path: circle(1000px at 90% -10%);
-       pointer-events: all;
-   }
-   .nav-links li{
-       opacity: 0;
-   }
-   .nav-links li:nth-child(1){
-       transition: all 0.5s ease 0.2s;
-   }
-   .nav-links li:nth-child(2){
-       transition: all 0.5s ease 0.4s;
-   }
-   .nav-links li:nth-child(3){
-       transition: all 0.5s ease 0.6s;
-   }
-   .nav-links li:nth-child(4){
-       transition: all 0.5s ease 0.7s;
-   }
-   .nav-links li:nth-child(5){
-       transition: all 0.5s ease 0.8s;
-   }
-   .nav-links li:nth-child(6){
-       transition: all 0.5s ease 0.9s;
-       margin: 0;
-   }
-   .nav-links li:nth-child(7){
-       transition: all 0.5s ease 1s;
-       margin: 0;
-   }
-   li.fade{
-       opacity: 1;
-   }
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-/*Animating Hamburger Icon on Click*/
-.toggle .line1{
-   transform: rotate(-45deg) translate(-5px,6px);
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
 }
-.toggle .line2{
-   transition: all 0.7s ease;
-   width:0;
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
 }
-.toggle .line3{
-   transform: rotate(45deg) translate(-5px,-6px);
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
 }
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-size: 1.2rem;
+  color: black;
+  z-index:20;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
 </style>
 
 
