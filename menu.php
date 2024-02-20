@@ -54,7 +54,7 @@
 
 	body {
 		font-family: "Poppins", sans-serif;
-		background: #ede9e3;
+		background: #e7d7c9;
 	}
 
 	.container {
@@ -66,6 +66,7 @@
 	.navbar {
 		width: 100%;
 		box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    background: #d4b2a7;
 	}
 
 	.nav-container {
@@ -76,8 +77,7 @@
 	}
 
 	.navbar .menu-items {
-		display: flex;
-		background-color: #ede9e3;
+		background-color: #d4b2a7;
 	}
 
 	.navbar .nav-container li {

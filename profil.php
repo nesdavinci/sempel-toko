@@ -12,6 +12,12 @@
 
     require "koneksi.php";
 
+    $id = $_SESSION["id"];
+
+    $sql = "SELECT * FROM user WHERE id = '$id'";
+    $query = mysqli_query($koneksi, $sql);
+
+    $user = mysqli_fetch_array($query);
     ?>
 
     <div>
@@ -22,7 +28,7 @@
 
             <table>
                 <tr>
-                    <td>Name</td>
+                    <td>Nama</td>
                     <td><input readonly type="text" name="username" value="<?= $user["username"] ?>"></td>
                 </tr>
                 <tr>
@@ -30,7 +36,7 @@
                     <td><input required type="password" name="new_password"></td>
                 </tr>
                 <tr>
-                    <td>Ulangi Sandi Baru</td>
+                    <td>Ulangi sandi Baru</td>
                     <td><input required type="password" name="confirm_password"></td>
                 </tr>
                 <tr>
