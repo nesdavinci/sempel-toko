@@ -9,11 +9,11 @@
     <?php include "menu.php"; ?>
 
     <?php
-    
+
 
     require "koneksi.php";
 
-    
+
     $sql = "SELECT * FROM barang";
     $query = mysqli_query($koneksi, $sql);
     ?>
@@ -33,9 +33,9 @@
                 <th>Harga jual</th>
                 <th>Dibuat pada</th>
                 <th>Diubah pada</th>
-                <th colspan="2">Aksi</th>
+                <th colspan="2">Edit</th>
             </tr>
- 
+
             <?php $i = 1; ?>
             <?php while ($barang = mysqli_fetch_array($query)) : ?>
                 <tr>
@@ -65,7 +65,6 @@
         </table>
     </div>
     <script>
-       
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
@@ -73,5 +72,37 @@
         }
     </script>
 </body>
+<style>
+    table {
+        margin: 0 auto;
+        width: 50%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #e7d7c9;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #d4b2a7;
+    }
+
+
+    th,
+    td {
+        border-color: #d4b2a7;
+    }
+</style>
 
 </html>

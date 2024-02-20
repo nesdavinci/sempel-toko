@@ -65,5 +65,37 @@
         }
     </script>
 </body>
+<style>
+    table {
+        margin: 0 auto;
+        width: 50%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #e7d7c9;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #d4b2a7;
+    }
+
+
+    th,
+    td {
+        border-color: #d4b2a7;
+    }
+</style>
 
 </html>

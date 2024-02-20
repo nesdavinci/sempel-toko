@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
 
 <body>
 
@@ -27,7 +27,7 @@
 		margin: 0;
 		padding: 0;
 		font-family: sans-serif;
-		background: #161b33;
+		background: #ede9e3;
 	}
 
 	.box {
@@ -37,7 +37,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background: #191919;
+		background: #e7d7c9;
 		text-align: center;
 	}
 
@@ -54,11 +54,11 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #474973;
+		border: 2px solid #d4b2a7;
 		padding: 14px 10px;
 		width: 200px;
 		outline: none;
-		color: white;
+		color: black;
 		border-radius: 24px;
 		transition: 0.25s;
 	}
@@ -76,10 +76,10 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #474973;
+		border: 2px solid #d4b2a7;
 		padding: 14px 40px;
 		outline: none;
-		color: white;
+		color: black;
 		border-radius: 24px;
 		transition: 0.25s;
 		cursor: pointer;
@@ -92,10 +92,10 @@
 		display: block;
 		margin: 20px auto;
 		text-align: center;
-		border: 2px solid #474973;
+		border: 2px solid #d4b2a7;
 		padding: 14px 40px;
 		outline: none;
-		color: white;
+		color: black;
 		border-radius: 24px;
 		transition: 0.25s;
 		cursor: pointer;
