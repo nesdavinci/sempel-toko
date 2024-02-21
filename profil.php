@@ -12,12 +12,6 @@
 
     require "koneksi.php";
 
-    $id = $_SESSION["id"];
-
-    $sql = "SELECT * FROM user WHERE id = '$id'";
-    $query = mysqli_query($koneksi, $sql);
-
-    $user = mysqli_fetch_array($query);
     ?>
 
     <div>
@@ -28,15 +22,15 @@
 
             <table>
                 <tr>
-                    <td>Nama</td>
-                    <td><input readonly type="text" name="username" value="<?= $user["username"] ?>"></td>
+                    <td>Name</td>
+                    <td><input readonly type="text" name="username"></td>
                 </tr>
                 <tr>
                     <td>Sandi Baru</td>
                     <td><input required type="password" name="new_password"></td>
                 </tr>
                 <tr>
-                    <td>Ulangi sandi Baru</td>
+                    <td>Ulangi Sandi Baru</td>
                     <td><input required type="password" name="confirm_password"></td>
                 </tr>
                 <tr>
@@ -51,3 +45,53 @@
 </body>
 
 </html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e7d7c9;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table td {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button[type="submit"] {
+        background-color: #d4b2a7;
+    }
+
+    button[type="reset"] {
+        background-color: #d4b2a7;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>

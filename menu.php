@@ -29,6 +29,7 @@
 					<li>TRANSAKSI
 						<a href="penjualan.php">Penjualan</a>
 						<a href="pembelian.php">Pembelian</a>
+						<a href="pelanggan.php">Pelanggan</a>
 					</li>
 					<li>
 						<a href="profil.php">Profil</a>
@@ -66,7 +67,7 @@
 	.navbar {
 		width: 100%;
 		box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-    background: #d4b2a7;
+		background: #d4b2a7;
 	}
 
 	.nav-container {
