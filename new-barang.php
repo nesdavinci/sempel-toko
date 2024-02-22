@@ -9,10 +9,11 @@
     <?php include "menu.php"; ?>
 
     <?php
+    
     ?>
 
     <div>
-
+      
         <form action="create-barang.php" method="POST">
             <h1>Tambah Barang</h1>
             <table>
@@ -24,9 +25,8 @@
                     <td>Kategori</td>
                     <td>
                         <select name="kategori">
-                            <option value="cincin">cincin</option>
-                            <option value="kalung">kalung</option>
-                            <option value="gelang">gelang</option>
+                            <option value="makanan">makanan</option>
+                            <option value="minuman">minuman</option>
                         </select>
                     </td>
                 </tr>

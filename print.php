@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Penjualan</title>
+    <title>Barang</title>
 </head>
 
 <body>
@@ -10,45 +10,50 @@
 
     <?php
 
+
     require "koneksi.php";
 
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+
+    $sql = "SELECT * FROM barang";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
     <div>
-        <h1>Data Penjualan</h1>
-        <form action="new-penjualan.php" method="GET">
+        <h1>Data Barang</h1>
+        <form action="new-barang.php" method="GET">
             <button type="submit">Tambah</button>
         </form>
         <table border="1">
             <tr>
                 <th>No.</th>
-                <th>Nama Barang</th>
-                <th>Jumlah</th>
-                <th>Total Harga</th>
-                <th>Diinput oleh</th>
-                <th>Waktu</th>
-                <th colspan="2">Aksi</th>
+                <th>Nama</th>
+                <th>Kategori</th>
+                <th>Stok</th>
+                <th>Harga jual</th>
+                <th>Dibuat pada</th>
+                <th>Diubah pada</th>
+                <th colspan="2">Edit</th>
             </tr>
+
             <?php $i = 1; ?>
-            <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
+            <?php while ($barang = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
-                    <td><?= $penjualan["nama_barang"] ?></td>
-                    <td><?= $penjualan["jumlah"] ?></td>
-                    <td><?= $penjualan["total_harga"] ?></td>
-                    <td><?= $penjualan["username"] ?></td>
-                    <td><?= $penjualan["created_at"] ?></td>
+                    <td><?= $barang["nama"] ?></td>
+                    <td><?= $barang["kategori"] ?></td>
+                    <td><?= $barang["stok"] ?></td>
+                    <td><?= $barang["harga_jual"] ?></td>
+                    <td><?= $barang["created_at"] ?></td>
+                    <td><?= $barang["updated_at"] ?></td>
                     <td>
-                        <form action="read-penjualan.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
+                        <form action="read-barang.php" method="GET">
+                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
                             <button type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
-                        <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
+                        <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
+                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
                             <button type="submit">Delete</button>
                         </form>
                     </td>
@@ -56,12 +61,14 @@
                 <?php $i++; ?>
             <?php endwhile ?>
         </table>
+        <script type="text/javascript">
+            window.print();
     </div>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
-            return confirm(`Hapus penjualan '${id}'?`);
+            return confirm(`Hapus barang '${id}'?`);
         }
     </script>
 </body>

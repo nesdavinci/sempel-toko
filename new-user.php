@@ -9,7 +9,10 @@
 	<?php include "menu.php"; ?>
 
 	<?php
-
+	if ($_SESSION["level"] != "admin") {
+		echo "Anda tidak dapat mengakses halam ini";
+		exit;
+	}
 	?>
 
 	<div>
@@ -25,25 +28,25 @@
 					<td><input type="password" name="password"></td>
 				</tr>
 				<tr>
-					<td>Level</td>
-					<td>
-						<select name="level">
-							<option value="admin">admin</option>
-							<option value="keuangan">keuangan</option>
-							<option value="logistik">logistik</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<button type="submit">TAMBAH</button>
-						<button type="submit">SIMPAN</button>
-						<button type="reset">RESET</button>
-					</td>
-				</tr>
-				</tabel>
-		</form>
-	</div>
+                    <td>Level</td>
+                    <td>
+                    	<select name="level">
+                   	    	<option value="admin">admin</option>
+                   		    <option value="keuangan">keuangan</option>
+                   		    <option value="logistik">logistik</option>
+                       	</select>
+                   </td>
+                </tr>
+                <tr>
+               	<td colspan="2">
+               		<button type="submit">TAMBAH</button>
+               		<button type="submit">SIMPAN</button>
+               		<button type="reset">RESET</button>
+               	</td>
+               </tr>
+           </tabel>
+       </form>
+   </div>
 </body>
 
 </html>

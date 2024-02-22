@@ -29,7 +29,6 @@
 					<li>TRANSAKSI
 						<a href="penjualan.php">Penjualan</a>
 						<a href="pembelian.php">Pembelian</a>
-						<a href="pelanggan.php">Pelanggan</a>
 					</li>
 					<li>
 						<a href="profil.php">Profil</a>
@@ -56,6 +55,9 @@
 	body {
 		font-family: "Poppins", sans-serif;
 		background: #e7d7c9;
+		background-image: url('https://i.pinimg.com/564x/e4/bc/09/e4bc09ae3fc89f20ba818816a3805ec4.jpg');
+        background-size: cover;
+        adding: 20px;
 	}
 
 	.container {
@@ -65,9 +67,8 @@
 	}
 
 	.navbar {
-		width: 100%;
-		box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-		background: #d4b2a7;
+		background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
 	}
 
 	.nav-container {
@@ -133,7 +134,7 @@
 		height: 4px;
 		width: 100%;
 		border-radius: 10px;
-		background: #0e2431;
+		background: #ffcc00;
 	}
 
 	.nav-container .hamburger-lines .line1 {
