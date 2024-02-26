@@ -55,7 +55,6 @@
 	body {
 		font-family: "Poppins", sans-serif;
 		background: #e7d7c9;
-		background-image: url('https://i.pinimg.com/564x/e4/bc/09/e4bc09ae3fc89f20ba818816a3805ec4.jpg');
         background-size: cover;
         adding: 20px;
 	}

@@ -25,8 +25,9 @@
                     <td>Kategori</td>
                     <td>
                         <select name="kategori">
-                            <option value="makanan">makanan</option>
-                            <option value="minuman">minuman</option>
+                            <option value="cincin">cincin</option>
+                            <option value="kalung">kalung</option>
+                            <option value="gelang">gelang</option>
                         </select>
                     </td>
                 </tr>
@@ -35,11 +36,7 @@
                     <td><input type="number" min="0" name="stok"></td>
                 </tr>
                 <tr>
-                    <td>Harga Beli</td>
-                    <td><input type="number" min="0" name="harga_beli"></td>
-                </tr>
-                <tr>
-                    <td>Harga Jual</td>
+                    <td>Harga harga</td>
                     <td><input type="number" min="0" name="harga_jual"></td>
                 </tr>
                 <tr>

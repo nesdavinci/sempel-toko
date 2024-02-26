@@ -28,6 +28,7 @@
 		padding: 0;
 		font-family: sans-serif;
 		background: #ede9e3;
+		background-image: url('https://i.pinimg.com/564x/e4/bc/09/e4bc09ae3fc89f20ba818816a3805ec4.jpg');
 	}
 
 	.box {
@@ -37,7 +38,9 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background: #e7d7c9;
+		color: #e7d7c9;
+		background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+        backdrop-filter: blur(10px);
 		text-align: center;
 	}
 
@@ -58,7 +61,7 @@
 		padding: 14px 10px;
 		width: 200px;
 		outline: none;
-		color: black;
+		color: white;
 		border-radius: 24px;
 		transition: 0.25s;
 	}
@@ -79,7 +82,7 @@
 		border: 2px solid #d4b2a7;
 		padding: 14px 40px;
 		outline: none;
-		color: black;
+		color: white;
 		border-radius: 24px;
 		transition: 0.25s;
 		cursor: pointer;
@@ -95,7 +98,7 @@
 		border: 2px solid #d4b2a7;
 		padding: 14px 40px;
 		outline: none;
-		color: black;
+		color: white;
 		border-radius: 24px;
 		transition: 0.25s;
 		cursor: pointer;

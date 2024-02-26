@@ -61,9 +61,9 @@
                 <?php $i++; ?>
             <?php endwhile ?>
         </table>
-        <script type="text/javascript">
-            window.print();
     </div>
+    <script type="text/javascript">
+            window.print();
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
