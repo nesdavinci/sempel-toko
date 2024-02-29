@@ -12,12 +12,10 @@
 
     require "koneksi.php";
 
-    $id = $_SESSION["id"];
 
-    $sql = "SELECT * FROM user WHERE id = '$id'";
-    $query = mysqli_query($koneksi, $sql);
+    
 
-    $user = mysqli_fetch_array($query);
+    
     ?>
 
     <div>
@@ -29,7 +27,7 @@
             <table>
                 <tr>
                     <td>Nama</td>
-                    <td><input readonly type="text" name="username" value="<?= $user["username"] ?>"></td>
+                    <td><input  required type="text" name="username"></td>
                 </tr>
                 <tr>
                     <td>Sandi Baru</td>

@@ -22,6 +22,7 @@
         <h1>Data Barang</h1>
         <form action="new-barang.php" method="GET">
             <button type="submit">Tambah</button>
+            <button onclick="cetaklaporan()">CETAK</button>
         </form>
         <table border="1">
             <tr>
@@ -64,6 +65,11 @@
             <?php endwhile ?>
         </table>
     </div>
+    <script>
+        function cetaklaporan() {
+            window.print();
+        }
+    </script>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);

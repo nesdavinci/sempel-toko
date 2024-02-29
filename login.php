@@ -39,7 +39,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #e7d7c9;
-		background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+		background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
 		text-align: center;
 	}

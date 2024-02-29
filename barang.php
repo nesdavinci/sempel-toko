@@ -17,12 +17,12 @@
     $sql = "SELECT * FROM barang";
     $query = mysqli_query($koneksi, $sql);
     ?>
-    
     <div>
         <h1>Data Barang</h1>
         <form action="new-barang.php" method="GET">
-            <button type="submit">Tambah</button><br></br>
         </form>
+        <button type="submit">Tambah</button>
+        <button onclick="cetaklaporan()">CETAK</button>
         <table border="1">
             <tr>
                 <th>No.</th>
@@ -30,8 +30,8 @@
                 <th>Kategori</th>
                 <th>Stok</th>
                 <th>Harga</th>
-                <th>Dibuat pada</th>
-                <th>Diubah pada</th>
+                <th>Dibuat tanggal</th>
+                <th>Diubah tanggal</th>
                 <th colspan="2">Edit</th>
             </tr>
 
@@ -62,8 +62,13 @@
             <?php endwhile ?>
         </table>
     </div>
-    <button><a target="_blank" href="print.php">CETAK</a></button><br></br>
     <script>
+        function cetaklaporan() {
+            window.print();
+        }
+    </script>
+    <script>
+
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");

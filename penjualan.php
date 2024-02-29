@@ -20,6 +20,7 @@
         <h1>Data Penjualan</h1>
         <form action="new-penjualan.php" method="GET">
             <button type="submit">Tambah</button>
+            <button onclick="cetaklaporan()">CETAK</button>
         </form>
         <table border="1">
             <tr>
@@ -27,22 +28,20 @@
                 <th>Nama Barang</th>
                 <th>Jumlah</th>
                 <th>Total Harga</th>
-                <th>Diinput oleh</th>
-                <th>Waktu</th>
-                <th colspan="2">Aksi</th>
+                <th>Waktu diinput</th>
+                <th>Waktu diubah</th>
+                <th colspan="2">Edit</th>
             </tr>
-            <?php $i = 1; ?>
-            <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $penjualan["nama_barang"] ?></td>
                     <td><?= $penjualan["jumlah"] ?></td>
-                    <td><?= $penjualan["total_harga"] ?></td>
+                    <td><?= $penjualan["total"] ?></td>
                     <td><?= $penjualan["username"] ?></td>
                     <td><?= $penjualan["created_at"] ?></td>
                     <td>
                         <form action="read-penjualan.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
+                            <input type="hidden" name="id">
                             <button type="submit">Lihat</button>
                         </form>
                     </td>
@@ -53,10 +52,13 @@
                         </form>
                     </td>
                 </tr>
-                <?php $i++; ?>
-            <?php endwhile ?>
         </table>
     </div>
+    <script>
+        function cetaklaporan() {
+            window.print();
+        }
+    </script>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
@@ -65,6 +67,7 @@
         }
     </script>
 </body>
+
 <style>
     table {
         margin: 0 auto;

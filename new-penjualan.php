@@ -9,10 +9,6 @@
     <?php include "menu.php"; ?>
 
     <?php
-    if ($_SESSION["level"] != "admin" && $_SESSION["level"] != "keuangan") {
-        echo "Anda tidak dapat mengakses halaman ini";
-        exit;
-    }
     ?>
 
     <?php
@@ -32,7 +28,7 @@
                         <select name="id_barang">
                             <?php while ($barang = mysqli_fetch_array($query)) : ?>
                                 <option value='<?= $barang["id"] ?>'>
-                                    <?= $barang["nama"] ?>, harga: <?= $barang["harga_jual"] ?>, stok: <?= $barang["stok"] ?>
+                                    <?= $barang["nama"] ?>, harga: <?= $barang["harga"] ?>, stok: <?= $barang["stok"] ?>
                                 </option>
                             <?php endwhile ?>
                         </select>
