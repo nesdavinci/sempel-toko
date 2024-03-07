@@ -9,13 +9,13 @@
     <?php include "menu.php"; ?>
     <div class="slideshow-container">
         <div class="slide fade">
-            <img src="https://i.pinimg.com/564x/4e/8b/17/4e8b17098d5755a280b68efaadcd340f.jpg" alt="Slide 1">
+            <img style="width: 250px" src="https://i.pinimg.com/564x/4e/8b/17/4e8b17098d5755a280b68efaadcd340f.jpg" alt="Slide 1">
         </div>
         <div class="slide fade">
-            <img src="https://i.pinimg.com/564x/fd/54/1f/fd541fa0893214c6e475d577ef2e6a9f.jpg" alt="Slide 2">
+            <img style="width: 250px" src="https://i.pinimg.com/564x/fd/54/1f/fd541fa0893214c6e475d577ef2e6a9f.jpg" alt="Slide 2">
         </div>
         <div class="slide fade">
-            <img src="https://i.pinimg.com/564x/f1/cc/17/f1cc17c389c51717443c05850ddd166b.jpg" alt="Slide 3">
+            <img style="width: 250px" src="https://i.pinimg.com/564x/f1/cc/17/f1cc17c389c51717443c05850ddd166b.jpg" alt="Slide 3">
         </div>
     </div>
     <br>

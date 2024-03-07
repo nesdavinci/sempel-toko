@@ -34,7 +34,7 @@
 					<li>
 						<a href="profil.php">Profil</a>
 					</li>
-						<a href="lougout.php">lougout</a>
+						<a href="logout.php">logout</a>
 					</li>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 
 .body {
 	font-family: "Poppins", sans-serif;
-	background: #e7d7c9;
+	background-color: #e7d7c9;
     background-size: cover;
     padding: 20px;
 }
@@ -80,7 +80,7 @@
 }
 
 .navbar .menu-items {
-	background-color: #d4b2a7;
+	background-color:  rgba(0, 0, 0, 0.5);
 }
 
 .navbar .nav-container li {
@@ -135,7 +135,7 @@
 	height: 4px;
 	width: 100%;
 	border-radius: 10px;
-	background: #ffcc00;
+	background: #d4b2a7;
 }
 
 .nav-container .hamburger-lines .line1 {
