@@ -36,8 +36,8 @@
                     <td><input type="number" min="0" name="stok"></td>
                 </tr>
                 <tr>
-                    <td>Harga harga</td>
-                    <td><input type="number" min="0" name="harga_jual"></td>
+                    <td>Harga</td>
+                    <td><input type="number" min="0" name="harga"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

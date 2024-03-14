@@ -17,12 +17,11 @@
     $sql = "SELECT * FROM barang";
     $query = mysqli_query($koneksi, $sql);
     ?>
+    
     <div>
         <h1>Data Barang</h1>
         <form action="new-barang.php" method="GET">
         </form>
-        <button type="submit">Tambah</button>
-        <button onclick="cetaklaporan()">CETAK</button>
         <table border="1">
             <tr>
                 <th>No.</th>
@@ -61,6 +60,8 @@
                 <?php $i++; ?>
             <?php endwhile ?>
         </table>
+        <button class="left-button" type="sumbit">Tambah</button>
+        <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     </div>
     <script>
         function cetaklaporan() {
@@ -77,36 +78,71 @@
     </script>
 </body>
 <style>
-    table {
-        margin: 0 auto;
-        width: 50%;
-        border-collapse: collapse;
-    }
+table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+}
 
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
 
-    th {
-        background-color: #e7d7c9;
-    }
+th {
+    background-color: #e7d7c9;
+}
 
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-    tr:hover {
-        background-color: #d4b2a7;
-    }
+tr:hover {
+    background-color: #d4b2a7;
+}
 
 
-    th,
-    td {
-        border-color: #d4b2a7;
-    }
+th,
+td {
+    border-color: #d4b2a7;
+}
+
+h1{
+    position: center;
+    text-align: center;
+}
+
+.left-button { 
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.right-button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 </style>
 
 </html>

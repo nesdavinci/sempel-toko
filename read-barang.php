@@ -9,18 +9,14 @@
     <?php include "menu.php"; ?>
 
     <?php
-    // halaman ini boleh diakses oleh semua level
 
     require "koneksi.php";
 
-    // id diambil dari tombol Lihat yang ditekan di barang.php
     $id = $_GET["id"];
 
-    // cari barang yang memiliki id tersebut
     $sql = "SELECT * FROM barang WHERE id = '$id'";
     $query = mysqli_query($koneksi, $sql);
 
-    // ambil data barang
     $barang = mysqli_fetch_array($query);
     ?>
 
@@ -40,8 +36,9 @@
                     <td>Kategori</td>
                     <td>
                         <select name="kategori">
-                            <option value="makanan" <?= $barang["kategori"] == "makanan" ? "selected" : "" ?>>makanan</option>
-                            <option value="minuman" <?= $barang["kategori"] == "minuman" ? "selected" : "" ?>>minuman</option>
+                            <option value="cincin" <?= $barang["kategori"] == "cincin" ? "selected" : "" ?>>cincin</option>
+                            <option value="kalung" <?= $barang["kategori"] == "kalung" ? "selected" : "" ?>>kalung</option>
+                            <option value="gelang" <?= $barang["kategori"] == "gelang" ? "selected" : "" ?>>gelang</option>
                         </select>
                     </td>
                 </tr>
@@ -50,12 +47,8 @@
                     <td><input type="number" name="stok" value="<?= $barang["stok"] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Harga Beli</td>
-                    <td><input type="number" name="harga_beli" value="<?= $barang["harga_beli"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Harga Jual</td>
-                    <td><input type="number" name="harga_jual" value="<?= $barang["harga_jual"] ?>"></td>
+                    <td>Harga</td>
+                    <td><input type="number" name="harga" value="<?= $barang["harga"] ?>"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

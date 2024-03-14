@@ -9,15 +9,11 @@
 	<?php include "menu.php"; ?>
 
 	<?php
-	if ($_SESSION["level"] != "admin") {
-		echo "Anda tidak dapat mengakses halam ini";
-		exit;
-	}
 	?>
 
 	<div>
 		<form action="create-user.php" method="POST">
-			<h1>Tambah User</h1>
+			<h1>Tambah Pengguna</h1>
 			<table>
 				<tr>
 					<td>Username</td>

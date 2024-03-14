@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <title>Home</title>
@@ -9,13 +8,13 @@
     <?php include "menu.php"; ?>
     <div class="slideshow-container">
         <div class="slide fade">
-            <img style="width: 250px" src="https://i.pinimg.com/564x/4e/8b/17/4e8b17098d5755a280b68efaadcd340f.jpg" alt="Slide 1">
+            <img style="width: 1150px" src="img/1.png" alt="Slide 1">
         </div>
         <div class="slide fade">
-            <img style="width: 250px" src="https://i.pinimg.com/564x/fd/54/1f/fd541fa0893214c6e475d577ef2e6a9f.jpg" alt="Slide 2">
+            <img style="width: 1150px" src="img/2.png" alt="Slide 2">
         </div>
         <div class="slide fade">
-            <img style="width: 250px" src="https://i.pinimg.com/564x/f1/cc/17/f1cc17c389c51717443c05850ddd166b.jpg" alt="Slide 3">
+            <img style="width: 1150px" src="img/3.png" alt="Slide 3">
         </div>
     </div>
     <br>
@@ -30,19 +29,20 @@
 </html>
 
 <style>
-    .slideshow-container {
+.slideshow-container {
     position: relative;
     max-width: 800px;
-    margin: auto;
-    }
+    margin: relative;
+    z-index: -1000;
+}
 
-    .slide {
+.slide {
     display: none;
 }
 
 .fade {
     animation-name: fade;
-    animation-duration: 2.5s;
+    animation-duration: 3.5s;
     margin: 45px;
     height: auto;
     width: 100%;
@@ -50,8 +50,8 @@
 }
 
 @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {opacity: .5} 
+    to {opacity: 2}
 }
 
 .dot {
@@ -59,10 +59,10 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #d4b2a7;
+    background-color: #cdc6c3;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.8s ease;
 }
 
 .active {

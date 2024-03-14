@@ -23,13 +23,16 @@
 				</div>
 				<div class="menu-items">
 					<li>
-						<a href="user.php">User</a>
+						<a href="user.php">Pengguna</a>
 					</li>
 					<li>
 						<a href="barang.php">Barang</a>
 					</li>
 					<li>
 						<a href="penjualan.php">Penjualan</a>
+					</li>
+					<li>
+						<a href="pelanggan.php">Pelanggan</a>
 					</li>
 					<li>
 						<a href="profil.php">Profil</a>
@@ -46,19 +49,25 @@
 
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-	{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@font-face {
+  font-family: 'poppins';
+  src:
+      url('font/poppins-regular.woff') format('woff'),
+  font-weight: 900;
+  font-style: normal;
+  font-display: normal;
 }
 
-.body {
-	font-family: "Poppins", sans-serif;
-	background-color: #e7d7c9;
+body {
+	font-family: 'poppins', sans-serif;
+	background-color: #d4b2a7;
     background-size: cover;
     padding: 20px;
+}
+
+.h2 {
+	margin-left: 10px;
 }
 
 .container {
@@ -68,7 +77,7 @@
 }
 
 .navbar {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #e7d7c9;
     padding: 20px;
 }
 
@@ -76,11 +85,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 62px;
+	height: 100vh;
 }
 
 .navbar .menu-items {
-	background-color:  rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar .nav-container li {
