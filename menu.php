@@ -67,7 +67,7 @@ body {
 }
 
 .h2 {
-	margin-left: 10px;
+	text-align: center;
 }
 
 .container {

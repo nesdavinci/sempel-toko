@@ -15,6 +15,10 @@
     $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
 
+    if (!$query) {
+        die('Error: ' . mysqli_error($koneksi)); // Tampilkan pesan kesalahan SQL
+    }
+
     ?>
 
     <div>
