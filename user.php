@@ -18,9 +18,6 @@
     <table border="1">
         <div>
             <h1>Data Pengguna</h1>
-            <form action="new-user.php" method="GET">
-                <button type="submit">Tambah</button>
-            </form>
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
@@ -40,19 +37,23 @@
                     <td>
                         <form action="read-user.php" method="GET">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button type="submit">Lihat</button>
+                            <button class="button" type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
                         <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button type="submit">Hapus</button>
+                            <button class="button" type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>
     </table>
+    <form action="new-user.php">
+        <button class="left-button" type="sumbit">Tambah</button>
+    </form>
+    <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
@@ -61,6 +62,7 @@
         }
     </script>
 </body>
+
 <style>
     table {
         margin: 0 auto;
@@ -80,7 +82,7 @@
     }
 
     tr:nth-child(even) {
-        background-color: #f2f2f2;
+        background-color: #e7d7c9;
     }
 
     tr:hover {
@@ -92,6 +94,54 @@
     td {
         border-color: #d4b2a7;
     }
+
+    h1 {
+        text-align: center;
+    }
+
+    .button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #a38f85;
+        padding: 7px 20px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .left-button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #e7d7c9;
+        padding: 14px 40px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .right-button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #e7d7c9;
+        padding: 14px 40px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        c
 </style>
 
 </html>
