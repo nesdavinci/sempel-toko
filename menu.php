@@ -4,195 +4,159 @@
 	<meta charset="utf-8" />
 	<title>HOME</title>
 	<link href="home.php" rel="stylesheet" type="text/css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
-	<nav>
-		<div class="navbar">
-			<div class="container nav-container">
-				<input class="checkbox" type="checkbox" name="" id="" />
-				<div class="hamburger-lines">
-					<span class="line line1"></span>
-					<span class="line line2"></span>
-					<span class="line line3"></span>
-				</div>
-				<div class="home">
-					<h2>
-						<li><a href="home.php">HALAMAN</a></li>
-						<h2>
-				</div>
-				<div class="menu-items">
-					<li>
-						<a href="user.php">Pengguna</a>
-					</li>
-					<li>
-						<a href="barang.php">Barang</a>
-					</li>
-					<li>
-						<a href="penjualan.php">Penjualan</a>
-					</li>
-					<li>
-						<a href="pelanggan.php">Pelanggan</a>
-					</li>
-					<li>
-						<a href="profil.php">Profil</a>
-					</li>
-					<a href="logout.php">logout</a>
-					</li>
-				</div>
-			</div>
-		</div>
-	</nav>
+	<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand me-auto" href="home.php">BERANDA</a>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="user.php">Pengguna</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="barang.php">Barang</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="penjualan.php">Penjualan</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="pelanggan.php">Pelanggan</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="profil.php">Profil</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+	<a href="logout.php" class="logout-button">Keluar</a>
+	<button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+    <section class="hero-section">
+		<div class="container d-flex align-items-center justify-content fs-1 text-white flex-column">
+			<form action="validasi.php" method="POST">
+				<h1>Selamat Datang!</h1>
+</from>
+	</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 </html>
 
 
 <style>
-	@font-face {
-		font-family: 'poppins';
-		src:
-			url('font/poppins-regular.woff') format('woff'),
-			font-weight: 900;
-		font-style: normal;
-		font-display: normal;
-	}
+.navbar {
+	background-color: #e7d7c9;
+	height: 80px;
+	margin: 20px;
+	border-radius: 16px:
+	padding: 0.5em;
+}
 
-	body {
-		font-family: 'poppins', sans-serif;
-		background-color: #d4b2a7;
-		background-size: cover;
-		padding: 20px;
-	}
+.navbar {
+	background-color: #e7d7c9;
+	height: 80px;
+}
 
-	.h2 {
-		text-align: center;
-	}
+.navbar-brand {
+	font-weight: 500;
+	color: black;
+	font-size: 24px;
+	transition: 0.3s color;
+}	
 
-	.container {
-		max-width: 1050px;
-		width: 90%;
-		margin: auto;
-	}
+.navbar-brand:hover, .navbar-brand:active {
+	color: #d4b2a7;
+}
 
-	.navbar {
-		background-color: #e7d7c9;
-		padding: 20px;
-	}
+.logout-button {
+	background-color: #d4b2a7;
+	color: black;
+	font-size: 14px;
+	padding: 8px 20px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: 0.3 background-color:
+}
 
-	.nav-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 100vh;
-	}
+.logout-button:hover {
+	background-color: #d4b2a7;
+}
 
-	.navbar .menu-items {
-		background-color: rgba(0, 0, 0, 0.5);
-	}
+.navbar-toggler {
+	border: none;
+	font-size: 1.25em;
+}
 
-	.navbar .nav-container li {
-		list-style: none;
-	}
+.navbar-toggler:focus, .btn-close:focus {
+	box-shadow: none;
+	outline: none;
+}
 
-	.navbar .nav-container a {
-		text-decoration: none;
-		color: #0e2431;
-		font-weight: 500;
-		font-size: 1.2rem;
-		padding: 0.7rem;
-	}
+.nav-link {
+	color: black;
+	font-weight: 500;
+	position: relative;
+}
 
-	.navbar .nav-container a:hover {
-		font-weight: bolder;
-	}
+.nav-link:hover, .nav-lin:active {
+	color: #d4b2a7;
+}
 
-	.nav-container {
-		display: block;
-		position: relative;
-		height: 60px;
-	}
+@media (min-width: 991px) {
+    .nav-link::before {
+    	content: "";
+	    position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    width: 0;
+	    height: 2px;
+	    background-color: #d4b2a7;
+	    visibility: hidden;
+	    transition: 0.3s ease-in-out;
+    }
 
-	.nav-container .checkbox {
-		position: absolute;
-		display: block;
-		height: 32px;
-		width: 32px;
-		top: 20px;
-		right: 20px;
-		z-index: 5;
-		opacity: 0;
-		cursor: pointer;
-	}
-
-	.nav-container .hamburger-lines {
-		display: block;
-		height: 26px;
-		width: 32px;
-		position: absolute;
-		top: 17px;
-		right: 20px;
-		z-index: 2;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	.nav-container .hamburger-lines .line {
-		display: block;
-		height: 4px;
+	.nav-link:hover::before, .nav-lin:hover::before {
 		width: 100%;
-		border-radius: 10px;
-		background: #d4b2a7;
+		visibility: visible;
 	}
 
-	.nav-container .hamburger-lines .line1 {
-		transform-origin: 0% 0%;
-		transition: transform 0.4s ease-in-out;
-	}
+}
+.hero-section {
+	background-color: #d4b2a7;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+    z-index: -1000;
+}
 
-	.nav-container .hamburger-lines .line {
-		transition: transform 0.2s ease-in-out;
-	}
 
-	.nav-container .hamburger-lines .line3 {
-		transform-origin: 0% 100%;
-		transition: transform 0.4s ease-in-out;
-	}
-
-	.navbar .menu-items {
-		padding-top: 120px;
-		box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-		height: 100vh;
-		width: 100%;
-		transform: translate(-150%);
-		display: flex;
-		flex-direction: column;
-		margin-left: -40px;
-		padding-left: 50px;
-		transition: transform 0.5s ease-in-ou;
-		text-align: center;
-	}
-
-	.navbar .menu-items li {
-		margin-bottom: 1.2rem;
-		font-size: 1.5rem;
-		font-weight: 500;
-	}
-
-	.nav-container input[type="checkbox"]:checked~.menu-items {
-		transform: translateX(0);
-	}
-
-	.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
-		transform: rotate(45deg);
-	}
-
-	.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
-		transform: scaleY(0);
-	}
-
-	.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
-		transform: rotate(-45deg);
-	}
+.hero-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    z-index: -1000;
+}
 </style>

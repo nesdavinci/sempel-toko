@@ -11,7 +11,7 @@
     <?php
 
     require "koneksi.php";
-
+    
     ?>
 
     <div>
@@ -23,7 +23,7 @@
             <table>
                 <tr>
                     <td>Nama</td>
-                    <td><input required type="text" name="username"></td>
+                    <td><input  required type="text" name="username"></td>
                 </tr>
                 <tr>
                     <td>Sandi Baru</td>

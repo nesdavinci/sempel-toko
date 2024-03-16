@@ -37,23 +37,23 @@
                     <td>
                         <form action="read-user.php" method="GET">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button class="button" type="submit">Lihat</button>
+                            <button type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
                         <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button class="button" type="submit">Hapus</button>
+                            <button type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>
     </table>
-    <form action="new-user.php">
+    <form action="new-user.php" method="GET">
         <button class="left-button" type="sumbit">Tambah</button>
+        <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     </form>
-    <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
@@ -62,86 +62,85 @@
         }
     </script>
 </body>
-
 <style>
-    table {
-        margin: 0 auto;
-        width: 50%;
-        border-collapse: collapse;
-    }
+table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+}
 
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
 
-    th {
-        background-color: #e7d7c9;
-    }
+th {
+    background-color: #e7d7c9;
+}
 
-    tr:nth-child(even) {
-        background-color: #e7d7c9;
-    }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-    tr:hover {
-        background-color: #d4b2a7;
-    }
+tr:hover {
+    background-color: #d4b2a7;
+}
 
+th,
+td {
+    border-color: #d4b2a7;
+}
 
-    th,
-    td {
-        border-color: #d4b2a7;
-    }
+h1{
+    text-align: center;
+}
 
-    h1 {
-        text-align: center;
-    }
+.button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #a38f85;
+    padding: 7px 20px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 
-    .button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #a38f85;
-        padding: 7px 20px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
+.left-button { 
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 
-    .left-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #e7d7c9;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
-
-    .right-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #e7d7c9;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        c
+.right-button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 </style>
 
 </html>

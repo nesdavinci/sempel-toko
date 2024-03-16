@@ -7,7 +7,6 @@
 	<title>Login Form</title>
 
 <body>
-
 	<form class="box" action="validasi.php" method="post">
 		<h1>Login</h1>
 		<input type="text" name="username" placeholder="Username">
@@ -19,8 +18,6 @@
 		</div>
 
 	</form>
-
-
 </body>
 <style>
 	body {

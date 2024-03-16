@@ -14,14 +14,18 @@
 
     $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
+
     if (!$query) {
-        die('Error: ' . mysqli_error($koneksi));
+        die('Error: ' . mysqli_error($koneksi)); // Tampilkan pesan kesalahan SQL
     }
+
     ?>
 
     <div>
         <h1>Data Penjualan</h1>
         <form action="new-penjualan.php" method="GET">
+            <button type="submit">Tambah</button>
+            <button onclick="cetaklaporan()">CETAK</button>
         </form>
         <table border="1">
             <tr>
@@ -33,7 +37,7 @@
                 <th>Waktu</th>
                 <th colspan="2">Edit</th>
             </tr>
-            <?php $i = 1; ?>
+             <?php $i = 1; ?>
             <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
@@ -45,23 +49,19 @@
                     <td>
                         <form action="read-penjualan.php" method="GET">
                             <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                            <button class="button" type="submit">Lihat</button>
+                            <button type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
                         <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                            <button class="button" type="submit">Hapus</button>
+                            <button type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>
         </table>
-        <form action="new-penjualan.php">
-            <button class="left-button" type="sumbit">Tambah</button>
-        </form>
-        <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     </div>
     <script>
         function konfirmasi(form) {
@@ -95,7 +95,7 @@
     }
 
     tr:nth-child(even) {
-        background-color: #e7d7c9;
+        background-color: #f2f2f2;
     }
 
     tr:hover {
@@ -106,55 +106,6 @@
     th,
     td {
         border-color: #d4b2a7;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    .button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #a38f85;
-        padding: 7px 20px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
-
-    .left-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #e7d7c9;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
-
-    .right-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #e7d7c9;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
     }
 </style>
 

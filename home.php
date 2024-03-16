@@ -6,15 +6,15 @@
 
 <body>
     <?php include "menu.php"; ?>
-    <div class="slideshow-container">
+    <div class="slideshow-container:center">
         <div class="slide fade">
-            <img style="width: 1150px" src="img/1.png" alt="Slide 1">
+            <img style="width: 1255px" src="img/1.png" alt="Slide 1">
         </div>
         <div class="slide fade">
-            <img style="width: 1150px" src="img/2.png" alt="Slide 2">
+            <img style="width: 1255px" src="img/2.png" alt="Slide 2">
         </div>
         <div class="slide fade">
-            <img style="width: 1150px" src="img/3.png" alt="Slide 3">
+            <img style="width: 1255px" src="img/3.png" alt="Slide 3">
         </div>
     </div>
     <br>
