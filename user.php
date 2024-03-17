@@ -37,13 +37,13 @@
                     <td>
                         <form action="read-user.php" method="GET">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button type="submit">Lihat</button>
+                            <button class="button" type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
                         <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button type="submit">Hapus</button>
+                            <button class="button" type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
@@ -52,8 +52,8 @@
     </table>
     <form action="new-user.php" method="GET">
         <button class="left-button" type="sumbit">Tambah</button>
-        <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     </form>
+    <button class="right-button" onclick="cetaklaporan()">Cetak</button>
     <script>
         function konfirmasi(form) {
             formData = new FormData(form);
@@ -61,6 +61,7 @@
             return confirm(`Hapus user '${id}'?`);
         }
     </script>
+    <?php include "footer.php"; ?>
 </body>
 <style>
 table {
@@ -81,7 +82,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #e7d7c9;
 }
 
 tr:hover {
@@ -118,7 +119,7 @@ h1{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #e7d7c9;
+    border: 2px solid #a38f85;
     padding: 14px 40px;
     outline: none;
     color: black;
@@ -133,7 +134,7 @@ h1{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #e7d7c9;
+    border: 2px solid #a38f85;
     padding: 14px 40px;
     outline: none;
     color: black;

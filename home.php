@@ -8,13 +8,13 @@
     <?php include "menu.php"; ?>
     <div class="slideshow-container:center">
         <div class="slide fade">
-            <img style="width: 1255px" src="img/1.png" alt="Slide 1">
+            <img style="width: 255px" src="https://i.pinimg.com/564x/74/3a/da/743adaab3bff5e5d2fed5f0f1f97bae2.jpg" alt="Slide 1">
         </div>
         <div class="slide fade">
-            <img style="width: 1255px" src="img/2.png" alt="Slide 2">
+            <img style="width: 255px" src="https://i.pinimg.com/736x/ec/bb/fb/ecbbfb5c4dce4e6095429ccb32f40280.jpg" alt="Slide 2">
         </div>
         <div class="slide fade">
-            <img style="width: 1255px" src="img/3.png" alt="Slide 3">
+            <img style="width: 255px" src="https://i.pinimg.com/564x/6b/2a/23/6b2a237d810f0def80f6b170a3c373c6.jpg" alt="Slide 3">
         </div>
     </div>
     <br>
@@ -24,11 +24,31 @@
         <span class="dot"></span> 
     </div>
     <script src="script.js"></script>
+    <?php include "footer.php"; ?>
 </body>
 
 </html>
 
 <style>
+body {
+	background-color: #d4b2a7;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+    z-index: -1000;
+}
+
+body:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    z-index: -1000;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 800px;

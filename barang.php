@@ -74,6 +74,7 @@
             return confirm(`Hapus barang '${id}'?`);
         }
     </script>
+    <?php include "footer.php"; ?>
 </body>
 <style>
 table {
@@ -133,7 +134,7 @@ h1{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #e7d7c9;
+    border: 2px solid #a38f85;
     padding: 14px 40px;
     outline: none;
     color: black;
@@ -148,7 +149,7 @@ h1{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #e7d7c9;
+    border: 2px solid #a38f85;
     padding: 14px 40px;
     outline: none;
     color: black;
