@@ -14,7 +14,7 @@
     <?php
     require "koneksi.php";
 
-    $sql = "SELECT * FROM barang";
+    $sql = "SELECT * FROM penjualan";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
@@ -23,12 +23,12 @@
             <h1>Tambah Penjualan</h1>
             <table>
                 <tr>
-                    <td>Barang</td>
+                    <td>penjualan</td>
                     <td>
-                        <select name="id_barang">
-                            <?php while ($barang = mysqli_fetch_array($query)) : ?>
-                                <option value='<?= $barang["id"] ?>'>
-                                    <?= $barang["nama"] ?>, harga: <?= $barang["harga"] ?>, stok: <?= $barang["stok"] ?>
+                        <select name="id_penjualan">
+                            <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
+                                <option value='<?= $penjualan["id"] ?>'>
+                                    <?= $penjualan["nama"] ?>, harga: <?= $penjualan["harga"] ?>, stok: <?= $penjualan["stok"] ?>
                                 </option>
                             <?php endwhile ?>
                         </select>

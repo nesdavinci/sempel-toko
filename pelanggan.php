@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Pelangan</title>
+    <title>Pelanggan</title>
 </head>
 
 <body>
@@ -14,48 +14,42 @@
     require "koneksi.php";
 
 
-    $sql = "SELECT * FROM barang";
+    $sql = "SELECT * FROM pelanggan";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
     <div>
         <h1>Data Pelanggan</h1>
-        <form action="new-barang.php" method="GET">
-            <button type="submit">Tambah</button>
-            <button onclick="cetaklaporan()">CETAK</button>
-        </form>
+
         <table border="1">
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
-                <th>Kategori</th>
-                <th>Stok</th>
-                <th>Harga</th>
+                <th>Alamat</th>
+                <th>Nomor Telepon</th>
                 <th>Dibuat pada</th>
                 <th>Diubah pada</th>
-                <th colspan="2">Edit</th>
             </tr>
 
             <?php $i = 1; ?>
-            <?php while ($barang = mysqli_fetch_array($query)) : ?>
+            <?php while ($pelanggan = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
-                    <td><?= $barang["nama"] ?></td>
-                    <td><?= $barang["kategori"] ?></td>
-                    <td><?= $barang["stok"] ?></td>
-                    <td><?= $barang["harga"] ?></td>
-                    <td><?= $barang["created_at"] ?></td>
-                    <td><?= $barang["updated_at"] ?></td>
+                    <td><?= $pelanggan["nama"] ?></td>
+                    <td><?= $pelanggan["alamat"] ?></td>
+                    <td><?= $pelanggan["nomor_telepon"] ?></td>
+                    <td><?= $pelanggan["created_at"] ?></td>
+                    <td><?= $pelanggan["updad_at"] ?></td>
                     <td>
-                        <form action="read-barang.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit">Lihat</button>
+                        <form action="read-pelanggan.php" method="GET">
+                            <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
+                            <button class="button" type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
-                        <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit">Delete</button>
+                        <form action="delete-pelanggan.php" method="POST" onsubmit="return konfirmasi(this)">
+                            <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
+                            <button class="button" type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
@@ -72,9 +66,14 @@
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
-            return confirm(`Hapus barang '${id}'?`);
+            return confirm(`Hapus pelanggan '${id}'?`);
         }
     </script>
+    <form action="new-pelanggan.php" method="GET">
+        <button class="left-button" type="sumbit">Tambah</button>
+    </form>
+    <button class="right-button" onclick="cetaklaporan()">Cetak</button>
+    <?php include "footer.php"; ?>
 </body>
 <style>
     table {
@@ -91,21 +90,69 @@
     }
 
     th {
-        background-color: #e7d7c9;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover {
         background-color: #d4b2a7;
     }
 
+    tr:nth-child(even) {
+        background-color: #d4b2a7;
+    }
+
+    tr:hover {
+        background-color: #e7d7c9;
+    }
 
     th,
     td {
-        border-color: #d4b2a7;
+        border-color: #e7d7c9;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #a38f85;
+        padding: 7px 20px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .left-button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #a38f85;
+        padding: 14px 40px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .right-button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #a38f85;
+        padding: 14px 40px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
     }
 </style>
 
