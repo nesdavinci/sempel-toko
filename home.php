@@ -8,13 +8,13 @@
     <?php include "menu.php"; ?>
     <div class="slideshow-container:center">
         <div class="slide fade">
-            <img style="width: 999px" src="img/1.jpeg" alt="Slide 1">
+            <img style="width: 999px" src="img/1.png" alt="Slide 1">
         </div>
         <div class="slide fade">
-            <img style="width: 999px" src="img/2.jpeg" alt="Slide 2">
+            <img style="width: 999px" src="img/2.png" alt="Slide 2">
         </div>
         <div class="slide fade">
-            <img style="width: 999px" src="img/3.jpeg" alt="Slide 3">
+            <img style="width: 999px" src="img/3.png" alt="Slide 3">
         </div>
     </div>
     <br>

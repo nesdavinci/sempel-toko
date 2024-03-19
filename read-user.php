@@ -21,17 +21,17 @@
 
 	<div>
 		<form action="update-user.php" method="POST">
-			<h1>Lihat User</h1>
+			<h1>Lihat Pengguna</h1>
 			 <input type="hidden" name="id" value="<?= $id ?>">
             <input type="hidden" name="old_password" value="<?= $user["password"] ?>">
 
             <table>
             	<tr>
-            		<td>Username</td>
+            		<td>Nama</td>
             		<td><input type="text" name="username" value="<?= $user["username"] ?>"></td>
             	</tr>
             	<tr>
-            		<td>Password</td>
+            		<td>Sandi</td>
             		<td><input type="password" name="password"></td>
             	</tr>
             	<tr>

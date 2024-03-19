@@ -61,7 +61,7 @@
 
 <style>
 .navbar {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 	height: 80px;
 	margin: 20px;
 	border-radius: 16px;
@@ -71,23 +71,24 @@
 }
 
 .navbar {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 	height: 80px;
 }
 
-.navbar-brand {
+navbar-brand {
 	font-weight: 500;
 	color: black;
 	font-size: 24px;
 	transition: 0.3s color;
 }	
 
-.navbar-brand:hover, .navbar-brand:active {
-	color: #d4b2a7;
+.navbar-brand:hover, 
+.navbar-brand:active {
+	color: #e7d7c9;
 }
 
 .logout-button {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 	color: black;
 	font-size: 14px;
 	padding: 8px 20px;
@@ -97,7 +98,7 @@
 }
 
 .logout-button:hover {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 }
 
 .navbar-toggler {
@@ -117,33 +118,32 @@
 }
 
 .nav-link:hover, .nav-lin:active {
-	color: #d4b2a7;
+	color: #e7d7c9;
 }
 
 @media (min-width: 991px) {
-    .nav-link::before {
-    	content: "";
-	    position: absolute;
-	    bottom: 0;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    width: 0;
-	    height: 2px;
-	    background-color: #d4b2a7;
-	    visibility: hidden;
-	    transition: 0.3s ease-in-out;
-    }
+.nav-link::before {
+	content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #e7d7c9;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
 
-	.nav-link:hover::before, .nav-lin:hover::before {
-		width: 100%;
-		visibility: visible;
-	}
+.nav-link:hover::before, .nav-lin:hover::before {
+	width: 100%;
+	visibility: visible;
+}
 
 }
 
-
 .offcanvas-header {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 }
 
 .offcanvas-title a {
@@ -153,11 +153,11 @@
 }
 
 .offcanvas-title a:hover {
-    color: #e7d7c9;
+    color: #d4b2a7;
     text-decoration: underline;
 }
 
 .offcanvas-body {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 }
 </style>

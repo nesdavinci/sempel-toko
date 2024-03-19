@@ -54,94 +54,101 @@
         <button class="left-button" type="sumbit">Tambah</button>
     </form>
     <button class="right-button" onclick="cetaklaporan()">Cetak</button>
+    </div>
     <script>
+        function cetaklaporan() {
+            window.print();
+        }
+    
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
             return confirm(`Hapus user '${id}'?`);
         }
     </script>
-    <?php include "footer.php"; ?>
 </body>
 <style>
-    table {
-        margin: 0 auto;
-        width: 50%;
-        border-collapse: collapse;
-    }
+body {
+    background-color: #ede9e3;
+}
+table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+}
 
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
 
-    th {
-        background-color: #d4b2a7;
-    }
+th {
+    background-color: #d4b2a7;
+}
 
-    tr:nth-child(even) {
-        background-color: #d4b2a7;
-    }
+tr:nth-child(even) {
+    background-color: #d4b2a7;
+}
 
-    tr:hover {
-        background-color: #e7d7c9;
-    }
+tr:hover {
+    background-color: #e7d7c9;
+}
 
-    th,
-    td {
-        border-color: #e7d7c9;
-    }
+th,
+td {
+    border-color: #e7d7c9;
+}
 
-    h1 {
-        text-align: center;
-    }
+h1 {
+    text-align: center;
+}
 
-    .button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #a38f85;
-        padding: 7px 20px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
+button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #a38f85;
+    padding: 7px 20px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 
-    .left-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #a38f85;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
+left-button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #a38f85;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 
-    .right-button {
-        border: 0;
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #a38f85;
-        padding: 14px 40px;
-        outline: none;
-        color: black;
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-    }
+right-button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #a38f85;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
 </style>
 
 </html>

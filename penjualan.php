@@ -12,7 +12,7 @@
 
     require "koneksi.php";
 
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
 
     if (!$query) {
@@ -39,7 +39,7 @@
                     <td><?= $i ?></td>
                     <td><?= $penjualan["nama_barang"] ?></td>
                     <td><?= $penjualan["jumlah"] ?></td>
-                    <td><?= $penjualan["total_harga"] ?></td>
+                    <td><?= $penjualan["total"] ?></td>
                     <td><?= $penjualan["username"] ?></td>
                     <td><?= $penjualan["created_at"] ?></td>
                     <td>
