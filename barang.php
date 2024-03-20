@@ -48,12 +48,6 @@
                             <button class="button" type="submit">Lihat</button>
                         </form>
                     </td>
-                    <td>
-                        <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button class="button" type="submit">Hapus</button>
-                        </form>
-                    </td>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>
@@ -74,13 +68,17 @@
             return confirm(`Hapus barang '${id}'?`);
         }
     </script>
-    <?php include "footer.php"; ?>
 </body>
 <style>
+    body {
+        background-color: #d4b2a7;
+    }
+    
     table {
         margin: 0 auto;
         width: 50%;
         border-collapse: collapse;
+        background-color:  #e7d7c9;
     }
 
     th,
@@ -91,20 +89,20 @@
     }
 
     th {
-        background-color: #d4b2a7;
+        background-color: #e7d7c9;
     }
 
     tr:nth-child(even) {
-        background-color: #d4b2a7;
+        background-color: #e7d7c9;
     }
 
     tr:hover {
-        background-color: #e7d7c9;
+        background-color: #d4b2a7;
     }
 
     th,
     td {
-        border-color: #e7d7c9;
+        border-color: #d4b2a7;
     }
 
     h1 {

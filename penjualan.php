@@ -12,7 +12,7 @@
 
     require "koneksi.php";
 
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
 
     if (!$query) {
@@ -39,7 +39,7 @@
                     <td><?= $i ?></td>
                     <td><?= $penjualan["nama_barang"] ?></td>
                     <td><?= $penjualan["jumlah"] ?></td>
-                    <td><?= $penjualan["total"] ?></td>
+                    <td><?= $penjualan["total_harga"] ?></td>
                     <td><?= $penjualan["username"] ?></td>
                     <td><?= $penjualan["created_at"] ?></td>
                     <td>
@@ -64,18 +64,22 @@
             window.print();
         }
     </script>
-    <form action="new-barang.php" method="GET">
+    <form action="new-penjualan.php" method="GET">
         <button class="left-button" type="sumbit">Tambah</button>
     </form>
     <button class="right-button" onclick="cetaklaporan()">Cetak</button>
-    <?php include "footer.php"; ?>
+    
 </body>
 
 <style>
-    table {
+    body {
+        background-color: #d4b2a7;
+    }
+       table {
         margin: 0 auto;
         width: 50%;
         border-collapse: collapse;
+        background-color:  #e7d7c9;
     }
 
     th,
@@ -86,20 +90,20 @@
     }
 
     th {
-        background-color: #d4b2a7;
+        background-color: #e7d7c9;
     }
 
     tr:nth-child(even) {
-        background-color: #d4b2a7;
+        background-color: #e7d7c9;
     }
 
     tr:hover {
-        background-color: #e7d7c9;
+        background-color: #d4b2a7;
     }
 
     th,
     td {
-        border-color: #e7d7c9;
+        border-color: #d4b2a7;
     }
 
     h1 {

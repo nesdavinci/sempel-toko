@@ -7,6 +7,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
+<body>
+    <?php include "menu.php"; ?>
+
+    <?php
+    ?>
+
+    <div>
+        <form class="box" action="create-user.php" method="POST">
+            <h1>Tambah Pengguna</h1>
+            <table>
+                <tr>
+                    <td><input type="text" name="username" placeholder="Username"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td>
+                    <td>Level</td>
+                    <td>
+                        <select name="level" class="button">
+                            <option value="admin">admin</option>
+                            <option value="keuangan">keuangan</option>
+                            <option value="logistik">logistik</option>
+                        </select>
+                    </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="button" type="submit">SIMPAN</button>
+                        <button class="button" type="reset">RESET</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </script>
+</body>
+
 <style>
 body {
     background: #d4b2a7;
@@ -37,7 +79,7 @@ body {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #d4b2a7;
+    border: 2px solid #e7d7c9;
     padding: 14px 10px;
     width: 200px;
     outline: none;
@@ -131,47 +173,8 @@ body {
 }
 </style>
 
-<body>
-    <?php include "menu.php"; ?>
-
-    <?php
-    ?>
-
-    <div>
-        <form class="box" action="create-user.php" method="POST">
-            <h1>Tambah Pengguna</h1>
-            <table>
-                <tr>
-                    <td><input type="text" name="username" placeholder="Username"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" name="password" placeholder="Password"></td>
-                </tr>
-                <tr>
-                    <td>
-                       <div class="btn-group dropup">
-                            <button type="button" class="btn btn-secondary">
-                            	Level
-                            </button>
-                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Level</span></button>
-                            <ul class="dropdown-menu">
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button class="button" type="submit">SIMPAN</button>
-                        <button class="button" type="reset">RESET</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </script>
-</body>
-
 </html>
+
+
+
+

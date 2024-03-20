@@ -57,11 +57,9 @@
 
 </html>
 
-
-
 <style>
 .navbar {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 	height: 80px;
 	margin: 20px;
 	border-radius: 16px;
@@ -71,11 +69,11 @@
 }
 
 .navbar {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 	height: 80px;
 }
 
-navbar-brand {
+.navbar-brand {
 	font-weight: 500;
 	color: black;
 	font-size: 24px;
@@ -84,11 +82,16 @@ navbar-brand {
 
 .navbar-brand:hover, 
 .navbar-brand:active {
-	color: #e7d7c9;
+	color: #d4b2a7;
+	color: #d4b2a7;
+}
+
+.container-fluid {
+    background-color: #e7d7c9;
 }
 
 .logout-button {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 	color: black;
 	font-size: 14px;
 	padding: 8px 20px;
@@ -98,7 +101,7 @@ navbar-brand {
 }
 
 .logout-button:hover {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 }
 
 .navbar-toggler {
@@ -118,7 +121,7 @@ navbar-brand {
 }
 
 .nav-link:hover, .nav-lin:active {
-	color: #e7d7c9;
+	color: #d4b2a7;
 }
 
 @media (min-width: 991px) {
@@ -130,7 +133,7 @@ navbar-brand {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #e7d7c9;
+    background-color: #d4b2a7;
     visibility: hidden;
     transition: 0.3s ease-in-out;
 }
@@ -143,7 +146,7 @@ navbar-brand {
 }
 
 .offcanvas-header {
-	background-color: #e7d7c9;
+	background-color: #d4b2a7;
 }
 
 .offcanvas-title a {
@@ -153,11 +156,11 @@ navbar-brand {
 }
 
 .offcanvas-title a:hover {
-    color: #d4b2a7;
+    color: #e7d7c9;
     text-decoration: underline;
 }
 
 .offcanvas-body {
-	background-color: #d4b2a7;
+	background-color: #e7d7c9;
 }
 </style>

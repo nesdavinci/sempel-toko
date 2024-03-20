@@ -2,70 +2,179 @@
 <html>
 
 <head>
-    <title>Read Barang</title>
+    <title>Read pelanggan</title>
 </head>
 
 <body>
     <?php include "menu.php"; ?>
 
     <?php
-    // halaman ini boleh diakses oleh semua level
 
     require "koneksi.php";
-
-    // id diambil dari tombol Lihat yang ditekan di barang.php
     $id = $_GET["id"];
 
-    // cari barang yang memiliki id tersebut
-    $sql = "SELECT * FROM barang WHERE id = '$id'";
+    $sql = "SELECT * FROM pelanggan WHERE id = '$id'";
     $query = mysqli_query($koneksi, $sql);
 
-    // ambil data barang
-    $barang = mysqli_fetch_array($query);
+    $pelanggan = mysqli_fetch_array($query);
     ?>
 
     <div>
-        <form action="update-barang.php" method="POST">
-            <h1>Lihat Barang</h1>
+        <form class="box" action="update-pelanggan.php" method="POST">
+            <h1>Lihat pelanggan</h1>
 
             
             <input type="hidden" name="id" value="<?= $id ?>">
 
             <table>
-                <tr>
-                    <td>Nama</td>
-                    <td><input type="text" name="nama" value="<?= $barang["nama"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Kategori</td>
-                    <td>
-                        <select name="kategori">
-                            <option value="makanan" <?= $barang["kategori"] == "makanan" ? "selected" : "" ?>>makanan</option>
-                            <option value="minuman" <?= $barang["kategori"] == "minuman" ? "selected" : "" ?>>minuman</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Stok</td>
-                    <td><input type="number" name="stok" value="<?= $barang["stok"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Harga Beli</td>
-                    <td><input type="number" name="harga_beli" value="<?= $barang["harga_beli"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Harga Jual</td>
-                    <td><input type="number" name="harga_jual" value="<?= $barang["harga_jual"] ?>"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit">SIMPAN</button>
-                        <button type="reset">RESET</button>
-                    </td>
-                </tr>
-            </table>
+            <tr>
+                <td>Nama</td>
+                <td><input class="button" readonly type="text" value="<?= $pelanggan["nama"] ?>"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td><input class="button" readonly type="varchar" value="<?= $pelanggan["alamat"] ?>"></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon</td>
+                <td><input class="button" readonly type="varchar" value="<?= $pelanggan["nomor_telepon"] ?>"></td>
+            </tr>
+            <tr>
+                <td>Dibuat Pada</td>
+                <td><input class="button" readonly type="text" value="<?= $pelanggan["created_at"] ?>"></td>
+            </tr>
+            <tr>
+                <td>Diubah Pada</td>
+                <td><input class="button" readonly type="text" value="<?= $pelanggan["created_at"] ?>"></td>
+            </tr>
+        </table>
         </form>
     </div>
 </body>
+
+<style>
+body {
+    background: #d4b2a7;
+}
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.box h1 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 280px;
+    border-color: #e7d7c9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .btn {
+  background-color: #d4b2a7;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer; 
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 160px;
+  background-color: #d4b2a7;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e7d7c9;
+}
+
+
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.th,
+.td {
+    border: 1px solid #e7d7c9;
+    padding: 8px;
+    text-align: center;
+    background-color: #e7d7c9;
+}
+
+.th {
+    background-color: #e7d7c9;
+}
+
+.tr:hover {
+    background-color: #d4b2a7;
+}
+
+.button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e7d7c9;
+    padding: 7px 20px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+</style>
+
 
 </html>
